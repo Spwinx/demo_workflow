@@ -19,7 +19,7 @@ jobs :
       - name : test
         run : npm run test
 
-    mon-2-job :
+  mon-2-job :
       runs-on ubuntu-latest
 
       steps :
