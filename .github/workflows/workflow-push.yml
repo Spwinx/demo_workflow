@@ -1,27 +1,28 @@
-name : Workflow lors d un push
+name: Workflow lors d'un push
 
-on : push
+on: 
+  push: 
 
-jobs :
-  mon-job : 
-    runs-on : ubuntu-latest
+jobs:
+  mon-job: 
+    runs-on: ubuntu-latest
 
-    steps : 
-      - name : Recuperation de notre application
-        uses : actions/checkout@v4
+    steps: 
+      - name: Récupération de notre application
+        uses: actions/checkout@v4
 
-      - name : Installation des dependences
-        run : npm install
+      - name: Installation des dépendances
+        run: npm install
 
-      - name : Build de l application
-        run : npm run build
+      - name: Build de l'application
+        run: npm run build
 
-      - name : test
-        run : npm run test
+      - name: Tests
+        run: npm run test
 
-  mon-2-job :
-    runs-on ubuntu-latest
+  mon-2-job:
+    runs-on: ubuntu-latest
 
-      steps :
-        name : Etape 2
-        run : echo "Etape 2 du second job"
+    steps:
+      - name: Étape 2
+        run: echo "Étape 2 du second job"
