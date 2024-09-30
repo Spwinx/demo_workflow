@@ -18,3 +18,10 @@ jobs :
 
       - name : test
         run : npm run test
+
+    mon-2-job :
+      runs-on ubuntu-latest
+
+      steps :
+        name : Etape 2
+        run : echo "Etape 2 du second job"
